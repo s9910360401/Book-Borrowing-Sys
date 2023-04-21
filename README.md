@@ -48,7 +48,7 @@
 
  example URL: http://localhost:8080/book
 
-###查詢書本
+### 查詢書本
  method: Get
  
  Request:
@@ -76,7 +76,7 @@
         }
     ]
 
-###新增書本
+### 新增書本
  method: Post
  
  Request:
@@ -101,7 +101,7 @@
     "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
     "inventoryEntity": null
     
-###修改書本
+### 修改書本
  method: Put
  
  Request:
@@ -132,7 +132,7 @@
         }
     ]
     
-###刪除書本
+### 刪除書本
  method: Delete
  
  Request:
