@@ -30,7 +30,7 @@
 ## 登入功能
  method: Post
  
- example URL: http://localhost:8080/register
+ example URL: http://localhost:8080/login
 
  Request:
  	
