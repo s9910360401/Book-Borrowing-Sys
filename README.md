@@ -64,17 +64,18 @@
   * 200: 回Json格式的傳書本Entity
   
   
-    "isbn": "9789577436368",
-    "name": "我想成為影之強者！ (1)",
-    "author": " 逢沢大介",
-    "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
-    "inventoryEntity": [
+        "isbn": "9789577436368",
+        "name": "我想成為影之強者！ (1)",
+        "author": " 逢沢大介",
+        "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」",
+        "inventoryEntity": [
         {
             "inventoryId": 5,
             "storeTime": "2023-04-21",
             "status": "在庫"
-        }
-    ]
+        } 
+        ]
+   
 
 ### 新增書本
  method: Post
@@ -86,20 +87,20 @@
  * Body: 
  
  
-    "isbn": "9789577436368",
-    "name": "我想成為影之強者！ (1)",
-    "author": " 逢沢大介",
-    "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
+        "isbn": "9789577436368",
+        "name": "我想成為影之強者！ (1)",
+        "author": " 逢沢大介",
+        "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
 
  Response:
   * 200: 回Json格式的傳書本Entity
   
   
-    "isbn": "9789577436368",
-    "name": "我想成為影之強者！ (1)",
-    "author": " 逢沢大介",
-    "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
-    "inventoryEntity": null
+        "isbn": "9789577436368",
+        "name": "我想成為影之強者！ (1)",
+        "author": " 逢沢大介",
+        "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
+        "inventoryEntity": null
     
 ### 修改書本
  method: Put
@@ -111,26 +112,27 @@
  * Body: 
  
  
-    "isbn": "9789577436368",
-    "name": "我想成為影之強者！ (1)",
-    "author": " 逢沢大介QQQ",
-    "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
+        "isbn": "9789577436368",
+        "name": "我想成為影之強者！ (1)",
+        "author": " 逢沢大介QQQ",
+        "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
 
  Response:
   * 200: 回Json格式的傳書本Entity
   
   
-    "isbn": "9789577436368",
-    "name": "我想成為影之強者！ (1)",
-    "author": " 逢沢大介QQQ",
-    "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
-    "inventoryEntity": [
+        "isbn": "9789577436368",
+        "name": "我想成為影之強者！ (1)",
+        "author": " 逢沢大介QQQ",
+        "introduction": "「吾名闇影。乃潛伏於闇影之中，狩獵闇影之人……」"
+        "inventoryEntity": [
         {
             "inventoryId": 5,
             "storeTime": "2023-04-21",
             "status": "在庫"
         }
-    ]
+        ]
+    
     
 ### 刪除書本
  method: Delete
@@ -148,7 +150,9 @@
   * 200: 回傳字串"刪除成功!!!"
   
 ## 借書功能
-
+ 
+ 登入之後，在Request Body 中提供想借閱書本的InventoryId即可進行借書
+ 
  method: Post
  
  example URL: http://localhost:8080/borrow
@@ -166,7 +170,9 @@
   * 400: 回傳字串"註冊失敗!"
  
 ## 還書功能
-
+ 
+ 登入之後，在Request Body 中提供想還書本的InventoryId即可進還書
+ 
  method: Post
  
  example URL: http://localhost:8080/loan
