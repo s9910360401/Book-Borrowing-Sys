@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 @Entity
 @Table(name="Book")
@@ -27,6 +30,7 @@ public class BookEntity {
 	private String introduction;
 	
 	@OneToMany(mappedBy="bookEntity")
+	@JsonManagedReference
 	private Set<InventoryEntity> inventoryEntity;
 	
 	public BookEntity() {

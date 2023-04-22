@@ -16,6 +16,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.esunbankbookBorrowing.ultility.InventoryStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "Inventory")
@@ -36,6 +37,7 @@ public class InventoryEntity {
 	
     @ManyToOne
     @JoinColumn(name="isbn",insertable = false, updatable = false,nullable = false)
+    @JsonBackReference
 	private BookEntity bookEntity;
 	
 	public InventoryEntity() {
